@@ -6,3 +6,7 @@ function fpg(num) {
 function sayBue() {
     alert('ПОКА')
 }
+
+function work() {
+    alert('WORK-WORK')
+}
