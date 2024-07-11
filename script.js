@@ -3,3 +3,6 @@ function fpg(num) {
     return num++
 }
 
+function sayBue() {
+    alert('ПОКА')
+}
