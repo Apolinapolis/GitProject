@@ -12,5 +12,5 @@ function work() {
 }
 
 (function() {
-    alert('self-invoking function')
-})
+    alert('s-i FUNK')
+}())
