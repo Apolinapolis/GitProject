@@ -10,3 +10,7 @@ function sayBue() {
 function work() {
     alert('WORK-WORK')
 }
+
+(function() {
+    alert('self-invoking function')
+})
