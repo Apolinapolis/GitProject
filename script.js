@@ -11,3 +11,7 @@ function sayBue() {
 function work() {
     alert('WORK-WORK')
 }
+
+(function() {
+    alert('s-i FUNK')
+}())
