@@ -1,6 +1,7 @@
-function fpg(num) {
-    console.log(++num);
-    return num++
+function preOutput() {
+    const resultText = prompt('opa')
+    const target = document.getElementById('pre')
+    target.textContent = resultText
 }
 
 function sayBue() {
