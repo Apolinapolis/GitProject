@@ -6,13 +6,11 @@ import { useDispatch } from 'react-redux';
 import { addTodo } from './store/todoSlice';
 
 
-
-
 function App() {
   const [text, setText] = useState('')
   const dispatch = useDispatch()
   const addTask = () => {
-    dispatch(addTodo({text}));
+    dispatch(addTodo({ text }));
     setText('');
   }
 
@@ -20,7 +18,7 @@ function App() {
     <div className="App">
       <h1>Todo List</h1>
       <InputField text={text} handleInput={setText} handleSubmit={addTask} />
-      <Todolist/>
+      <Todolist />
     </div>
   );
 }

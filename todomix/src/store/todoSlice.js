@@ -8,7 +8,7 @@ const todoSlice = createSlice({
   reducers: {
     addTodo(state, action) {
       state.todos.push({
-        id: new Date().toISOString,
+        id: new Date().toISOString(),
         text: action.payload.text,
         complited: false,
       });
@@ -16,7 +16,12 @@ const todoSlice = createSlice({
     removeTodo(state, action) {
       state.todos = state.todos.filter( el => el.id !== action.payload.id )
     },
-    toogleTodoComplete(state, action) {},
+    toogleTodoComplete(state, action) {
+      const toggledItem = state.todos.find( el => el.id === action.payload.id);
+      console.log(toggledItem);
+      
+      toggledItem.complited = !toggledItem.complited
+    },
   },
 });
 
