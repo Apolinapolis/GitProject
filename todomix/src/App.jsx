@@ -6,8 +6,6 @@ import { useDispatch } from 'react-redux';
 import { addTodo } from './store/todoSlice';
 
 
-
-
 function App() {
   const [text, setText] = useState('')
   const dispatch = useDispatch()
