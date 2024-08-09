@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux"
+
 import { removeTodo, toogleTodoComplete } from "../store/todoSlice"
 
 export const TodoItem = ({ id, text, complited }) => {
