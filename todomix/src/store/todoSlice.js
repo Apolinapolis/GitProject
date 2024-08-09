@@ -121,34 +121,20 @@ const todoSlice = createSlice({
   },
   reducers: {
     addTodo(state, action) {
-      state.todos.push(action.payload);
+      state.todos.push({
+        id: new Date().toISOString(),
+        text: action.payload.text,
+        complited: false,
+      });
+
     },
     removeTodo(state, action) {
       state.todos = state.todos.filter((el) => el.id !== action.payload.id);
     },
     toogleTodoComplete(state, action) {
-      const toggledItem = state.todos.find((el) => el.id === action.payload.id);
-      toggledItem.completed = !toggledItem.completed;
+      const todo = state.todos.find( el => el.id === action.payload.id )
+      todo.complited = !todo.complited
     },
-  },
-  extraReducers: (builder) => {
-    builder
-      .addCase(fetchTodos.pending, (state) => {
-        state.status = "loading";
-      })
-      .addCase(fetchTodos.fulfilled, (state, action) => {
-        state.status = "success";
-        state.todos = action.payload;
-      })
-      .addCase(fetchTodos.rejected, (state, action) => {
-        setError(state, action);
-      })
-      .addCase(fetchDeleteTodo.rejected, (state, action) => {
-        setError(state, action);
-      })
-      .addCase(fetchToogleStatus.rejected, (state, action) => {
-        setError(state, action);
-      });
   },
 });
 
