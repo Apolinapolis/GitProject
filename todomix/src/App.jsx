@@ -2,10 +2,8 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import { Todolist } from './components/TodoList';
 import { InputField } from './components/InputField';
-import { useDispatch } from 'react-redux';
-import { addTodo } from './store/todoSlice';
-
-
+import { useDispatch, useSelector } from 'react-redux';
+import { addNewTask, fetchTodos } from './store/todoSlice';
 
 function App() {
   const dispatch = useDispatch()
