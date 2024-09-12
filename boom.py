@@ -1,5 +1,8 @@
+from os import remove
 
 
-boost = [el for el in range(1,11,2)]
+def descending_order(num):
+    temp = sorted([int(el) for el in str(num)], reverse=True)
+    return int(''.join(map(str,temp)))
 
-print(boost)
+descending_order(123456789)
