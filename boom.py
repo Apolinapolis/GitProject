@@ -1,8 +1,18 @@
-from os import remove
-
-
-def descending_order(num):
-    temp = sorted([int(el) for el in str(num)], reverse=True)
-    return int(''.join(map(str,temp)))
-
-descending_order(123456789)
+# import unittest
+# from name_function import get_formatted_name
+#
+#
+#
+#
+# print("Enter 'q' at any time to quit.")
+#
+# while True:
+#     first = input("\nPlease give me a first name: ")
+#     if first == 'q':
+#         break
+#     last = input("Please give me a last name: ")
+#     if last == 'q':
+#         break
+#
+#     formatted_name = get_formatted_name(first, last)
+#     print(f"\tNeatly formatted name: {formatted_name}.")
